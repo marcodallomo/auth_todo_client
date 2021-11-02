@@ -1,13 +1,30 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(228, 195, 228);
+  color: purple;
+}
+h1 {
+  color: purple;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.todoTitle {
+  color: purple;
+  font-size: 1.4rem;
+}
+
+body {
+  font-family: "Gluten", cursive;
+  font-size: 1.2rem;
+}
+
+.myBtn {
+  background-color: rgb(134, 7, 134);
+  color: white;
+}
+
+.myBtn:hover {
+  background-color: rgb(224, 64, 224);
+}
+
+.myBtn:active {
+  background-color: rgb(224, 64, 224);
 }
