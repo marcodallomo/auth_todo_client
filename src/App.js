@@ -10,6 +10,11 @@ import Placeholder from "./components/Placeholder";
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+const audience = process.env.REACT_APP_AUDIENCE;
+console.log('domain', domain);
+console.log('clientId', clientId);
+console.log('audience', audience);
+
 
 function App() {
   const { isLoading } = useAuth0();
@@ -17,7 +22,7 @@ function App() {
   if (isLoading) return <div>Loading...</div>;
   return (
     <Fragment>
-      <Auth0Provider domain={domain} clientId={clientId} redirectUri={window.location.origin}>
+      <Auth0Provider domain={domain} clientId={clientId} audience={audience} redirectUri={window.location.origin}>
         <div className="container">
           <LoginButton />
           <LogoutButton />

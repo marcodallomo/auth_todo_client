@@ -11,7 +11,7 @@ const ListTodos = () => {
     async (id) => {
       try {
         const token = await getAccessTokenSilently();
-        const deleteTodo = await fetch(`http://localhost:5001/todos/${id}`, {
+        await fetch(`http://localhost:5001/todos/${id}`, {
           method: "DELETE",
           headers: { authorization: `Bearear${token}` },
         });
@@ -31,7 +31,7 @@ const ListTodos = () => {
         const response = await fetch(`http://localhost:5001/todos/${user.sub}`, {
           method: "GET",
 
-          headers: { authorization: `Bearer${token}` },
+          headers: { authorization: `Bearer ${token}` },
         });
 
         const jsonData = await response.json();
@@ -41,7 +41,7 @@ const ListTodos = () => {
         console.error(err.message);
       }
     },
-    [getAccessTokenSilently]
+    [getAccessTokenSilently, user]
   );
 
   useEffect(() => {
