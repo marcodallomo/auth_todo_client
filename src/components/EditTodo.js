@@ -26,15 +26,15 @@ const EditTodo = ({ todo }) => {
 
   return (
     <Fragment>
-      <button type="button" class="btn btn-warning" data-toggle="modal" data-target={`#id${todo.todo_id}`}>
+      <button type="button" className="btn btn-warning" data-toggle="modal" data-target={`#id${todo.todo_id}`}>
         Edit
       </button>
 
-      <div class="modal" id={`id${todo.todo_id}`} onClick={() => setDescription(todo.description)}>
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Edit Todo</h4>
+      <div className="modal" id={`id${todo.todo_id}`} onClick={() => setDescription(todo.description)}>
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h4 className="modal-title">Edit Todo</h4>
               <button type="button" className="close" data-dismiss="modal" onClick={() => setDescription(todo.description)}>
                 &times;
               </button>
